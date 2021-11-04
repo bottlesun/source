@@ -55,7 +55,20 @@
         $(".pop5").hide(500);
     }
     
-
+    let couponClose6 = function(){
+        if($("input[name='chkbox']").is(":checked") == true){
+            setCookie("custom_close","Y",1);   //기간( ex. 1은 하루, 7은 일주일)
+        }
+        $(".pop6").hide(500);
+    }
+    
+    let couponClose7 = function(){
+        if($("input[name='chkbox']").is(":checked") == true){
+            setCookie("custom_close","Y",1);   //기간( ex. 1은 하루, 7은 일주일)
+        }
+        $(".pop7").hide(500);
+    }
+    
     $(document).ready(function(){
         
 
@@ -64,6 +77,8 @@
         var cookiedata3 = document.cookie;
         var cookiedata4 = document.cookie;
         var cookiedata5 = document.cookie;
+        var cookiedata6 = document.cookie;
+        var cookiedata7 = document.cookie;
 
 
         if(cookiedata1.indexOf("custom_close=Y")<0){
@@ -91,6 +106,17 @@
         }else{
             $(".pop5").hide();
         }
+        if(cookiedata6.indexOf("custom_close=Y")<0){
+            $(".pop6").show();
+        }else{
+            $(".pop6").hide();
+        }
+        if(cookiedata7.indexOf("custom_close=Y")<0){
+            $(".pop7").show();
+        }else{
+            $(".pop7").hide();
+        }
+
 
         $("#close_wrap1").click(function(){
             couponClose1();
@@ -110,6 +136,14 @@
 
         $("#close_wrap5").click(function(){
             couponClose5();
+        });
+
+        $("#close_wrap6").click(function(){
+            couponClose6();
+        });
+
+        $("#close_wrap7").click(function(){
+            couponClose7();
         });
 
 
