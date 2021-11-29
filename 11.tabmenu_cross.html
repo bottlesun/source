@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>겹쳐 교차시킨 타입</title>
+
+
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="css/tabmenu_cross.css">
+</head>
+
+<body>
+    <div class="main4_wrap">
+        <div class="tabArea_wrap">
+            <section class="tabArea">
+                <ul class="tab">
+                    <li class="on">
+                        <a href="#!1">
+                            <span>67㎡A</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!2">
+                            <span>67㎡B</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!3">
+                            <span>67㎡C</span>
+                        </a>
+                    </li>
+                    <li> <a href="#!4"><span>44㎡D</span>
+                        </a>
+                    </li>
+    
+                </ul>
+                <div class="tabBox on">
+                    <div class="box_wrap">
+                        <div class="box1">
+                            <div class="type_title">67<span>㎡</span>A</div>
+                            <p><img src="https://cdn.imweb.me/upload/S20211125d68167835f6db/248f08491623d.jpg" alt="67㎡A"></p>
+    
+                    </div>
+                    <div class="box2">
+                        <div class="box_color">
+                            <div class="type_name">67<span>㎡</span>A</div>
+                            <div class="type_info">20평형: 38세대</div>
+                            <a href="#" class="type_link"> UNITE안내 바로가기 →</a>
+                        </div>
+
+                    </div>
+                    </div> <!--box_wrap 박스전체-->
+    
+                </div>
+                <div class="tabBox">
+                    <div class="box_wrap">
+                        <div class="box1">
+                            <div class="type_title">67<span>㎡</span>B</div>
+                            <p><img src="https://cdn.imweb.me/upload/S20211125d68167835f6db/248f08491623d.jpg" alt="67㎡B"></p>
+    
+                    </div>
+                    <div class="box2">
+                        <div class="box_color">
+                            <div class="type_name">67<span>㎡</span>B</div>
+                            <div class="type_info">20평형: 38세대</div>
+                            <a href="#" class="type_link"> UNITE안내 바로가기 →</a>
+                        </div>
+                    </div>
+                    </div> <!--box_wrap 박스전체-->
+                </div>
+                <div class="tabBox">
+                    <div class="box_wrap">
+                        <div class="box1">
+                            <div class="type_title">68<span>㎡</span>C</div>
+                            <p><img src="https://cdn.imweb.me/upload/S20211125d68167835f6db/248f08491623d.jpg" alt="67㎡C"></p>
+    
+                    </div>
+                    <div class="box2">
+                        <div class="box_color">
+                            <div class="type_name">67<span>㎡</span>C</div>
+                            <div class="type_info">20평형: 38세대</div>
+                            <a href="#" class="type_link"> UNITE안내 바로가기 →</a>
+                        </div>
+                     
+                    </div>
+                    </div> <!--box_wrap 박스전체-->
+                </div>
+                <div class="tabBox">
+                    <div class="box_wrap">
+                        <div class="box1">
+                            <div class="type_title">44<span>㎡</span>D</div>
+                            <p><img src="https://cdn.imweb.me/upload/S20211125d68167835f6db/248f08491623d.jpg" alt="44㎡D"></p>
+    
+                    </div>
+                    <div class="box2">
+                        <div class="box_color">
+                            <div class="type_name">44<span>㎡</span>D</div>
+                            <div class="type_info">20평형: 38세대</div>
+                            <a href="#" class="type_link"> UNITE안내 바로가기 →</a>
+                        </div>
+                    </div>
+                    </div> <!--box_wrap 박스전체-->
+                </div>
+    
+    
+            </section>
+        </div>
+    </div>
+
+      
+
+
+<script>
+    
+
+$(document).ready(function () {
+    $(".tabArea .tab li a").on("click", function () { // 해당 요소를 클릭하는 내 자신의 index 번호를 가져온다. [0], [1]
+        const num = $(".tabArea .tab li a").index($(this));
+        // 기존에 적용되어 있는 on class 삭제
+        $(".tabArea .tab li").removeClass("on");
+        $(".tabArea .tabBox").removeClass("on");
+        // 다음 요소 클릭시 on class 추가
+        $('.tabArea .tab li:eq(' + num + ')').addClass("on");
+        $('.tabArea .tabBox:eq(' + num + ')').addClass("on");
+    });
+});
+
+</script>
+
+</body>
+
+</html>
