@@ -1,81 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>슬라이더</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인슬라이드</title>
 </head>
 <body>
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="css/slide.css">
+    
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+  <!-- Demo styles -->
+  <style>
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+  #main_wrap {
+      position: relative;
+      height: 100%;
+      
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /*슬라이드 배경*/
+    .slider {
+      height: 100vh
+    }
+
+    .slider .swiper-slide {
+      position: relative;
+    }
+
+    .slider .swiper-slide {
+      transition-duration: 1s !important;
+
+    }
+
+    .slider .swiper-slide .bg{
+      width: 100%;
+      height: 100%;
+      background-position: bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .slider .swiper-slide .bg1 {
+      background-image: url('https://via.placeholder.com/1960x960');
+    }
+
+
+    .swiper-slide .itme_list {
+      width: 100%;
+      max-width:500px;
+      height: auto;
+      position: absolute;
+      top:40%; /*위치조정*/
+      left:50px; /*위치조정*/
+      transform: translate(0%,-50%);
+    }
+
+    .itme_list div {margin-top:10px;} /* 텍스트 공통 마진*/ 
+    .itme_list div:first-child {margin-top:0;}
+
+    .itme_list .text_logo{
+    width:100%;
+    max-width:250px;/*값 조정*/
+    height:50px;
+    background: url('https://via.placeholder.com/250x50/333.png') no-repeat;
+    background-position: center;
+    background-size:contain;
+  }
+
+  .itme_list .text_item1{
+    width:100%;
+    max-width:400px;/*값 조정*/
+    height:80px;
+    background: url('https://via.placeholder.com/400x80/d05900.png/fff') no-repeat;
+    background-position: center;
+    background-size:contain;
+  }
+
+  .itme_list .text_item2{
+    width:100%;
+    max-width:400px;/*값 조정*/
+    height:50px;
+    background: url('https://via.placeholder.com/400x50/eaeaea.png/d05900') no-repeat;
+    background-position: center;
+    background-size:contain;
+  }
+
+
+
+  @media (max-width:975px){
+
+    .slider .swiper-slide .bg{
+      background-position: bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    /* 변경 이미지*/
+    .slider .swiper-slide .bg1{
+      background-image: url('https://via.placeholder.com/975x730');
+    }
+
+
+    .swiper-slide .itme_list{
+      max-width:95%;
+      top:10px;
+      left:50%;
+      transform: translate(-50%,0);
+    }
+    .swiper-slide .itme_list div{margin:10px auto}
+
+  }
+
+
+@media (max-width:750px){
+
+/* 변경 이미지*/
+.slider .swiper-slide .bg1{
+  background-image: url('https://via.placeholder.com/750x1150');
+}
+
+}
+
+
+
+    /* 배경이미지 스케일 효과 
+      .slider .swiper-slide.swiper-slide-active .bg1 {
+          animation: bg_scale 5s;
+        }
+      
+        .slider .swiper-slide.swiper-slide-active .bg2 {
+          animation: bg_scale 5s;
+        }
+      
+        .slider .swiper-slide.swiper-slide-active .bg3 {
+          animation: bg_scale 5s;
+        }
+    */
+
+      /*글자효과*/
+
+    .slider .swiper-slide.swiper-slide-active .itme_list div:nth-child(1) {
+      animation: text .5s .2s both;
+    }
+
+    .slider .swiper-slide.swiper-slide-active .itme_list div:nth-child(2) {
+      animation: text 1s .4s both;
+    }
+    .slider .swiper-slide.swiper-slide-active .itme_list div:nth-child(3) {
+      animation: text 1.5s .8s both;
+    }
+
+
+/*키프레임*/
+    @keyframes text {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bg_scale {
+      0% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+
+
+
+  </style>
+
+  <!-- Swiper -->
+  <section id="main_wrap">
+    <div class="swiper mySwiper slider">
+      <div class="swiper-wrapper">
+
+        <article class="swiper-slide slide1">
+          <div class="bg1 bg"></div>
+            <div class="itme_list">
+                <div class="text_logo"></div>
+                <div class="text_item1"></div>
+                <div class="text_item2"></div>
+            </div>
+        </article><!--slide1-->
+
+      </div><!--swiper-wrapper-->
+    </div><!--swiper-->
+  </section><!--main_wrap-->
+
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
-  <!-- Swiper -->
-    <div id="main_wrap">
-    <div class="swiper mySwiper slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide bg1">
-            <div class="bg_wrap">
-              <div class="bg_item_wrap">
-                <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/00bfcb7ee85b8.png " alt="큰틀">  </div>
- 
-            <div class="itme_list"> 
-              <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/f0385ea776085.png" alt="역사를품다" >
-              <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/173d8210b169a.png" alt="메인타이틀">
-              <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/d4b6434661508.png" alt="작은글씨">
-              <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/a723f54e00dcb.png" alt="경주더테라스">
-              </div>
-              </div>
-
-        </div>
-
-        <div class="swiper-slide bg2">
-          <div class="bg_wrap">
-            <div class="bg_item_wrap">
-              <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/87d6a0f8a603d.png " alt="큰틀">  </div>
-          <div class="itme_list"> 
-            <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/118e156525e28.png" alt="역사를품다" >
-            <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/10029ec92c20a.png" alt="메인타이틀">
-            <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/224dd46d8a6cf.png" alt="작은글씨">
-            <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/2fd2fa8b755f9.png" alt="경주더테라스">
-            </div>
-          </div>
-        </div>
-
-      <div class="swiper-slide bg3">
-          <div class="bg_wrap2">
-            <div class="bg_item_wrap2">
-              <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/f16d3b6352183.png" alt="bg">  </div>
-          <div class="itme_list2"> 
-            <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/243cad307300f.png" alt="더 좋은 삶">
-            <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/a85a448473325.png" alt="큰글씨">
-            <img src="https://cdn.imweb.me/upload/S2021082008657a00b1c2d/6bac923f6ac20.png" alt="오픈">
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-    <div class="floating_wrap">
-      <ul>
-        <li><a href="#"><img src="https://cdn.imweb.me/upload/S20211020533e5ebee1985/7bf7106149c82.png" alt="오픈예정"></a></li>
-        <li><a href="#"><img src="https://cdn.imweb.me/upload/S20211020533e5ebee1985/2c9a70b9ec786.png " alt="관심고객등록"></a></li>
-        <li><a href="#"><img src="https://cdn.imweb.me/upload/S20211020533e5ebee1985/cc3f51a21ab01.png " alt="동시분양 "></a></li>
-      </ul>
-    </div>
-    
-
-
- 
     <!-- Initialize Swiper -->
     <script>
-      let swiper = new Swiper(".mySwiper", {
+      var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
         loop: true,
         effect: "fade",
@@ -87,9 +236,6 @@
 
 
     </script>
-    </div>
-
-    
 
 </body>
 </html>
