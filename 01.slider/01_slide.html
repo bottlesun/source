@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인슬라이드</title>
+</head>
+<body>
+    
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/css/slide.css">
+
+  <!-- Swiper -->
+  <section id="main_wrap">
+    <div class="swiper mySwiper slider">
+      <div class="swiper-wrapper">
+
+        <article class="swiper-slide slide1">
+          <div class="bg1 bg"></div>
+            <div class="itme_list">
+                <div class="text_logo"></div>
+                <div class="text_item1"></div>
+                <div class="text_item2"></div>
+            </div>
+        </article><!--slide1-->
+
+        <article class="swiper-slide slide2">
+          <div class="bg2 bg"></div>
+            <div class="itme_list">
+                <div class="text_logo"></div>
+                <div class="text_item1"></div>
+                <div class="text_item2"></div>
+            </div>
+        </article><!--slide1-->
+
+
+
+      </div><!--swiper-wrapper-->
+    </div><!--swiper-->
+  </section><!--main_wrap-->
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        loop: true,
+        effect: "fade",
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      });
+
+    </script>
+
+</body>
+</html>

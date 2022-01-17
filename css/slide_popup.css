@@ -1,55 +1,56 @@
-@charset "utf-8";
-
-  * {
-    margin: 0;
-  }
-
-   /*슬라이드팝업*/
-.slide_popup_wrap{position: absolute;top:150px;}
-.slide_popup{height:494px;width:100%;max-width:80%;position: relative;z-index: 1001;}
-.slide_popup_size{position:absolute;top:0;left:0px;display: flex;width:100%;height:100%;transition: 1s}
-.slide_popup_size.popupaction{left:-1400px;}/*1개당 350px 사이즈로 팝업 지정하기 (최대 1400px)*/
-.slide_img{height:100%;}
-.slide_img img{height:100%;}
-.slide_bar{display:none;}
-
-.slide_btn_wrap{background-color: #004c6b;width:40px;height:100%;right:0;color:#fff;font-weight:bold;
-font-size:20px;border-left: 1px solid #ddcfc9;cursor: pointer;position: relative;}
-.slide_btn_wrap::before{content:" ";position:absolute;width:100%;height:34%;background-color:#dfd1ca;top:66%;}
-.slide_btn{transform: rotate(90deg);height:40px;line-height: 40px;margin-top:15px;}
-
-.slide_arrow{width:40px;transform: rotate(90deg);margin-top:50px;transition: 0.3s;font-size:14px}
-.slide_arrow.arrowaction{transform: rotate(-90deg);margin-top:22px;width:40px;margin-left:-3px;}
-
-@media (max-width:1450px){
-.slide_popup{height:400px;width:100%;max-width:80%;position: relative;z-index: 1001;}
-.slide_popup_size.popupaction{left:-1133.56px;}/*1개당 283.39px 사이즈로 팝업 지정하기 (최대 1133.56px)*/
-
-.slide_btn_wrap{font-size:15px}
-.slide_arrow{width:40px;transform: rotate(90deg);margin-top:25px;transition: 0.3s;font-size:13px}
-.slide_arrow.arrowaction{transform: rotate(-90deg);margin-top:-3px;width:40px;}
-
-      }
-@media (max-width:1250px){
-.slide_popup{height:350px;width:100%;max-width:80%;position: relative;z-index: 1001;}
-.slide_popup_size.popupaction{left:-991.88px;}/*1개당 247.97px 사이즈로 팝업 지정하기 (최대 991.88px)*/
-
-.slide_btn_wrap{font-size:15px}
-.slide_arrow{width:40px;transform: rotate(90deg);margin-top:25px;transition: 0.3s;font-size:13px}
-.slide_arrow.arrowaction{transform: rotate(-90deg);margin-top:-3px;width:40px;}
-      }
-
-
-@media (max-width:975px){
-.img1.display_none{display:none;}
-.img2.display_none{display:none;}
-.img3.display_none{display:none;}
-.img4.display_none{display:none;}
-.slide_popup{max-width:100%;height:100%;position: fixed;}
-.slide_btn_wrap{display:none;}
-.slide_img{position:absolute;top:50px;left:50%;transform: translate(-50%,0);width:100%;height:100%;max-width:350px;min-height:494px;}
-.slide_img img{width:100%;height:auto}
-.slide_bar{display:block;position: absolute;top:494px;left:50%;transform: translate(-50%,0);width:350px;text-align: center;padding:10px 0;background-color:#626469;color:#fff;font-weight:bold;cursor: pointer;font-size:14px;letter-spacing:2px;}
-      }
-/*슬라이드팝업 end*/
-
+         *{
+               margin:0;
+               padding:0;
+         }
+         
+         /*슬라이드팝업*/
+          .slide_popup_wrap{position: absolute;top:150px;}
+          .slide_popup{height:494px;width:100%;max-width:80%;position: relative;z-index: 1001;}
+          .slide_popup_size{position:absolute;top:0;left:0px;display: flex;width:100%;height:100%;transition: 1s}
+          .slide_popup_size.popupaction{left:-1400px;}/*1개당 350px 사이즈로 팝업 지정하기 (최대 1400px)*/
+          .slide_img{height:100%;}
+          .slide_img img{height:100%;}
+          .slide_bar{display:none;}
+        
+          .slide_btn_wrap{background-color: #b61879;width:40px;height:100%;right:0;color:#fff;font-weight:bold;
+          font-size:20px;border-left: 1px solid #fdec80;cursor: pointer;position: relative;}
+          /* .slide_btn_wrap::before{content:" ";position:absolute;width:100%;height:34%;background-color:#fdec80;top:66%;} 하단부분 선 */
+        
+          .slide_btn{transform: rotate(90deg);height:40px;line-height: 40px;margin-top: 20px;}
+          .slide_arrow{width:40px;transform: rotate(90deg);margin-top:50px;transition: 0.3s;font-size:14px;}
+          .slide_arrow::before{content: "\00d7";font-size: 25px;}
+          .slide_arrow.arrowaction::before{content: "▲";font-size: 18px;}
+        
+          @media (max-width:1450px){
+          .slide_popup{height:400px;width:100%;max-width:80%;position: relative;z-index: 1001;}
+          .slide_popup_size.popupaction{left:-1133.56px;}/*1개당 283.39px 사이즈로 팝업 지정하기 (최대 1133.56px)*/
+        
+          .slide_btn_wrap{font-size:15px}
+          .slide_arrow{width:40px;transform: rotate(90deg);margin-top:25px;transition: 0.3s;font-size:13px}
+          
+        
+                }
+          @media (max-width:1250px){
+          .slide_popup{height:350px;width:100%;max-width:80%;position: relative;z-index: 1001;}
+          .slide_popup_size.popupaction{left:-991.88px;}/*1개당 247.97px 사이즈로 팝업 지정하기 (최대 991.88px)*/
+        
+          .slide_btn_wrap{font-size:15px}
+          .slide_arrow{width:40px;transform: rotate(90deg);margin-top:25px;transition: 0.3s;font-size:13px}
+        
+                }
+        
+        
+         @media (max-width:975px){
+        .img1.display_none{display:none;}
+        .img2.display_none{display:none;}
+        .img3.display_none{display:none;}
+        .img4.display_none{display:none;}
+        
+        .slide_popup{max-width:100%;height:100%;position: fixed;}
+        .slide_btn_wrap{display:none;}
+        .slide_img{position:absolute;top:50px;left:50%;transform: translate(-50%,0);width:100%;height:100%;max-width:350px;min-height:494px;}
+        .slide_img img{width:100%;height:auto}
+        .slide_bar{display:block;position: absolute;top:494px;left:50%;transform: translate(-50%,0);width:350px;text-align: center;
+          padding:10px 0;background-color:#626469;color:#fff;font-weight:bold;cursor: pointer;font-size:14px;letter-spacing:2px;}
+                }
+          /*슬라이드팝업 end*/

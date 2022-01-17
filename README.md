@@ -17,7 +17,38 @@
 #### 09.slide_type_vertical bar.html - 세션형 슬라이드 타입 (버튼세로형) <br>
 #### 10.slide_type_horizontal bar.html - 세션 슬라이드 타입 (버튼가로형) <br>
 #### 11.tabmenu_cross.html - 이미지랑 글이 겹쳐있는 디자인이 들어간 탭메뉴 <br>
+
+### 2021-11-29 정리
+
+#### 09.slide_type_vertical bar.html - 세션형 슬라이드 타입 (버튼세로형) <br>
+#### 10.slide_type_horizontal bar.html - 세션 슬라이드 타입 (버튼가로형) <br>
+#### 11.tabmenu_cross.html - 이미지랑 글이 겹쳐있는 디자인이 들어간 탭메뉴 <br>
+
+### 2022-01-17 정리 
+
+#### 폴더로 정리 01.slider , 02.tabmenu , 03.popup
+#### 페이징 리뉴얼 이미지 변경 등 제이쿼리 -> 일부코드 바닐라 JS로 변경
+
+#### 01.slider
+01. slide.html - 슬라이드형 메인페이지 (페이드인)
+02. slide.scale.html - 슬라이드형 메인페이지 (스케일효과)
+
+#### 02.tabmenu
+01. tabmenu_css.html - 탭메뉴 CSS 버전 -> 고정된 height 값으로 진행해야함.
+02. tabmenu_js.html - 탭메뉴 JS 버전 -> height 값을 자동으로 조절 함.
+
+#### 03.popup
+01. video_popup_vimeo.html - 비메오 버전 iframe 비디오 팝업
+02. video_popup_youtube.html - 유튜브 버전 비디오 팝업
+03. popup_li_jquery.html - li태그로 만들어진 일반 팝업 쿠키사용 등 Jquery 사용
+04. slide_popup.html - 슬라이드형태로 만들어진 팝업
+05. floatbar.html - 사이드 플로팅 바
+
+// 삭제 목록
+#### 09.slide_type_vertical bar.html - 세션형 슬라이드 타입 (버튼세로형) 
+#### 10.slide_type_horizontal bar.html - 세션 슬라이드 타입 (버튼가로형) 
+#### 11.tabmenu_cross.html - 이미지랑 글이 겹쳐있는 디자인이 들어간 탭메뉴 
 -------------------------------------------------------------------------------
 
-해당 소스파일은 구글링 및 개인 작업 or 요청사항에 의해 제작 된 것으로
-제이쿼리 소스나 예쁘게 작업된 코드 파일이 아님을 명시해 드립니다.
+해당 소스파일은 구글링 및 개인 작업 or 요청사항에 의해 제작 된 것으로 원작자나 라이브러리를 사용
+제이쿼리 소스나 작업된 코드 파일이 아님을 명시해 드립니다.

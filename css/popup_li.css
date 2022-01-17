@@ -11,8 +11,8 @@
 
 .coordinate{position: relative;}
             .coordinnate_sub{position: absolute;z-index: 9999;top:0;left:0;width:100%;}
-            .link_btn{width:120px;height:35px;}
-            .sub_link7{width:260px;height:35px;left:50%;transform: translate(-50%,0);top:74%}
+            .link_btn{width:120px;height:35px;background-color: red;}
+            .sub_link7{width:260px;height:35px;left:50%;transform: translate(-50%,0);top:74%;background-color: red;}
             .sub_link1{left:27px;top:144px}
             .sub_link2{left:160px;top:144px}
             .sub_link3{left:27px;top:185px}
