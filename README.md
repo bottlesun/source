@@ -24,7 +24,7 @@
  10.slide_type_horizontal bar.html - 세션 슬라이드 타입 (버튼가로형) <br>
  11.tabmenu_cross.html - 이미지랑 글이 겹쳐있는 디자인이 들어간 탭메뉴 <br>
 
-### 2022-01-17 정리 
+### 2022-01-17 정리 (리뉴얼)
 
  폴더로 정리 01.slider , 02.tabmenu , 03.popup
  페이징 리뉴얼 이미지 변경 등 제이쿼리 -> 일부코드 바닐라 JS로 변경
@@ -43,11 +43,13 @@
 03. popup_li_jquery.html - li태그로 만들어진 일반 팝업 쿠키사용 등 Jquery 사용
 04. slide_popup.html - 슬라이드형태로 만들어진 팝업
 05. floatbar.html - 사이드 플로팅 바
+06. button_hover_leftSlide.html - 버튼 호버시 왼쪽으로 길어지는 버튼 (no js) - 22.01.29 추가
 
 #### 삭제 목록
  ##### ~~09.slide_type_vertical bar.html - 세션형 슬라이드 타입 (버튼세로형)~~
  ##### ~~10.slide_type_horizontal bar.html - 세션 슬라이드 타입 (버튼가로형)~~
  ##### ~~11.tabmenu_cross.html - 이미지랑 글이 겹쳐있는 디자인이 들어간 탭메뉴~~ 
+
 -------------------------------------------------------------------------------
 
 해당 소스파일은 구글링 및 개인 작업 or 요청사항에 의해 제작 된 것으로 원작자나 라이브러리를 사용
