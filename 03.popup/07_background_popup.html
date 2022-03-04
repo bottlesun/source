@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이어팝업</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/background_popup.css">
+</head>
+
+<body>
+    
+    <div class="pc_display">
+        <div class="popup_wrap" data-aos="fade-in" onclick="ClickFade()">
+
+            <div class="popup_btn" data-aos="fade-down" data-aos-delay="300" >
+                <a href="javascript:void(0)">
+                    [팝업 닫기]
+                </a>
+            </div>
+    
+            <div class="pop_menu" data-aos="fade-down" data-aos-delay="300">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)" class="no_link">
+                            <img src="https://via.placeholder.com/300x420/eaeaea.png/" alt="경쟁률">
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="javascript:void(0)" class="no_link">
+                            <img src="https://via.placeholder.com/300x420/fff.png/333" alt="당첨자발표">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+        </div>
+        <!--popup_wrap-->
+    
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/background_popup.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500,
+        });
+    </script>
+</body>
+
+</html>
