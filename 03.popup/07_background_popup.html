@@ -12,35 +12,67 @@
 
 <body>
     
-    <div class="pc_display">
-        <div class="popup_wrap" data-aos="fade-in" onclick="ClickFade()">
-
-            <div class="popup_btn" data-aos="fade-down" data-aos-delay="300" >
-                <a href="javascript:void(0)">
-                    [팝업 닫기]
-                </a>
-            </div>
-    
-            <div class="pop_menu" data-aos="fade-down" data-aos-delay="300">
-                <ul>
-                    <li>
-                        <a href="javascript:void(0)" class="no_link">
-                            <img src="https://via.placeholder.com/300x420/eaeaea.png/" alt="경쟁률">
-                        </a>
-                    </li>
-    
-                    <li>
-                        <a href="javascript:void(0)" class="no_link">
-                            <img src="https://via.placeholder.com/300x420/fff.png/333" alt="당첨자발표">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-    
+    <div class="popup_wrap" data-aos="fade-in" >
+        <div class="popup_bg" onclick="ClickFade()"></div>
+        <div class="popup_btn pc_display" data-aos="fade-down" data-aos-delay="300" onclick="ClickFade()">
+            <a href="javascript:void(0)">
+                [팝업 닫기]
+            </a>
         </div>
-        <!--popup_wrap-->
-    
+
+        <div class="pop_menu" data-aos="fade-down" data-aos-delay="300" onclick="ClickFade()">
+            <ul>
+                <li class="links_position popupmenu_1">
+                    <a href="javascript:void(0)" class="menu_link_1 menu_links" ></a>
+                    <a href="javascript:void(0)" class="menu_link_2 menu_links" ></a>
+                    <img src="https://via.placeholder.com/300x460/eaeaea.png/" alt="popup1">
+                    <div class="popup_btn popup_btn1 m_display" onclick="ClickFade()" >
+                        <a href="javascript:void(0)">
+                            팝업 닫기
+                        </a>
+                    </div>
+                </li>
+
+                <li class="links_position popupmenu_2">
+                    <a href="javascript:void(0)" class="menu_link_3 menu_links" ></a>
+                    <a href="javascript:void(0)" class="menu_link_4 menu_links" ></a>
+                    <img src="https://via.placeholder.com/300x460/000.png/"
+                        alt="popup2">
+                        <div class="popup_btn popup_btn2 m_display">
+                            <a href="javascript:void(0)">
+                                팝업 닫기
+                            </a>
+                        </div>
+                </li>
+
+                <li class="popupmenu_3">
+                    <a href="javascript:void(0)" >
+                        <img src="https://via.placeholder.com/300x460/eaeaea.png/" alt="popup3">
+                    </a>
+                    <div class="popup_btn popup_btn3 m_display" >
+                        <a href="javascript:void(0)">
+                            팝업 닫기
+                        </a>
+                    </div>
+                </li>
+
+                <li class="popupmenu_4">
+                    <a href="javascript:void(0)" class="no_link" >
+                        <img src="https://via.placeholder.com/300x460/000.png/" alt="popup4">
+                    </a>
+                    <div class="popup_btn popup_btn4 m_display" onclick="ClickFade()">
+                        <a href="javascript:void(0)">
+                            팝업 닫기
+                        </a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
     </div>
+    <!--popup_wrap-->
+
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/background_popup.js"></script>
